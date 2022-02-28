@@ -73,6 +73,9 @@ try {
                 <?php } ?>
             </tbody>
         </table>
+        <div class="row col-md-2">
+        <a class="btn btn-sm btn-info" href="tranche.php">Ajouter tranche</a>
+        </div>
 
     </div>
 </div>
