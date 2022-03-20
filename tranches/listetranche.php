@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 try {
-    $dbh = new PDO('mysql:host=localhost;dbname=dbsorevet', "root", "root");
+    $dbh = new PDO('mysql:host=localhost;dbname=dbsorevet', "root", "");
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $requete = $dbh->prepare("select * from tranches");
     $requete->execute();

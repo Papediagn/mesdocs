@@ -2,7 +2,7 @@
 try{
 
 $idb=$_GET['idb'];
-$dbh = new PDO('mysql:host=localhost;dbname=dbsorevet', "root", "root");
+$dbh = new PDO('mysql:host=localhost;dbname=dbsorevet', "root", "");
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $requete=$dbh->prepare("delete from bloc where idbloc=?");
 $requete->execute([$idb]);

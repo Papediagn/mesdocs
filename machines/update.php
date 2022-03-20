@@ -2,7 +2,7 @@
 try{
     $idm=$_POST['idmachine'];
     $nom=$_POST['nom'];   
-$dbh = new PDO('mysql:host=localhost;dbname=dbsorevet', "root", "root");
+$dbh = new PDO('mysql:host=localhost;dbname=dbsorevet', "root", "");
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $requete=$dbh->prepare("update machine set nom=? where idmachine=?");
 $requete->execute([$nom,$idm]);

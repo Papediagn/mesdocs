@@ -2,7 +2,7 @@
 try {
 
     //connexion a la base de donnee
-    $dbh = new PDO('mysql:host=localhost;dbname=dbsorevet', "root", "root");
+    $dbh = new PDO('mysql:host=localhost;dbname=dbsorevet', "root", "");
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $requete = $dbh->prepare("select * from bloc order by idbloc");
     $requete->execute();

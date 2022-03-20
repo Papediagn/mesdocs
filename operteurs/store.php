@@ -5,7 +5,7 @@ try {
     $nom = $_POST['nom'];
     $telephone = $_POST['telephone'];
     //connexion a la base de donnee
-    $dbh = new PDO('mysql:host=localhost;dbname=dbsorevet', "root", "root");
+    $dbh = new PDO('mysql:host=localhost;dbname=dbsorevet', "root", "");
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $requete = $dbh->prepare("insert into operateurs (prenom,nom,telephone) values(?,?,?)");
     $requete->execute([$prenom, $nom, $telephone]);

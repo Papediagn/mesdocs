@@ -2,7 +2,7 @@
 try{
 
 $idop=$_GET['idop'];
-$dbh = new PDO('mysql:host=localhost;dbname=dbsorevet', "root", "root");
+$dbh = new PDO('mysql:host=localhost;dbname=dbsorevet', "root", "");
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $requete=$dbh->prepare("select * from operateurs where idoperateur=?");
 $requete->execute([$idop]);
